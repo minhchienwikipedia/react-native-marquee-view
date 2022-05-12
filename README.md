@@ -52,7 +52,8 @@ import MarqueeView from 'react-native-marquee-view';
 - `stop`: Reset animation
 
 
-
+### More
+This package inspired by https://github.com/homielab/react-native-auto-scroll
 
 ## License
 
