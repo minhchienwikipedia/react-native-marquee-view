@@ -9,11 +9,16 @@
 
 ## Getting started
 
-`npm install react-native-marquee-view --save`
+```sh
+npm install react-native-marquee-view --save
+```
 
 - OR
 
-`yarn add react-native-marquee-view`
+
+```sh
+yarn add react-native-marquee-view
+```
 
 ## Usage
 ```javascript
