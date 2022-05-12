@@ -1,0 +1,27 @@
+{
+  "name": "react-native-marquee-view",
+  "version": "1.0.0",
+  "description": "React Native Draggable View",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minhchienwikipedia/react-native-marquee-view.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-marquee-view",
+    "auto scroll",
+    "marquee"
+  ],
+  "author": "minhchienwikipedia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/minhchienwikipedia/react-native-marquee-view/issues"
+  },
+  "homepage": "https://github.com/minhchienwikipedia/react-native-marquee-view#readme",
+  "peerDependencies": {
+  }
+}
