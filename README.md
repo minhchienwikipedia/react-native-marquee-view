@@ -4,7 +4,7 @@
 #### Help you auto scroll content
 
 ## Demo
-<img src="./demo.gif" data-canonical-src="./demo.gif" width="200" height="400" />
+<img src="./demo.gif" data-canonical-src="./demo.gif" width="300" height="200" />
 
 
 ## Getting started
