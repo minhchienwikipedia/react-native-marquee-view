@@ -9,11 +9,16 @@
 
 ## Getting started
 
-`npm install react-native-marquee-view --save`
+```sh
+npm install react-native-marquee-view --save
+```
 
 - OR
 
-`yarn add react-native-marquee-view`
+
+```sh
+yarn add react-native-marquee-view
+```
 
 ## Usage
 ```javascript
@@ -47,7 +52,8 @@ import MarqueeView from 'react-native-marquee-view';
 - `stop`: Reset animation
 
 
-
+### More
+This package inspired by https://github.com/homielab/react-native-auto-scroll
 
 ## License
 
