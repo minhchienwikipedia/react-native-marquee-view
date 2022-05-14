@@ -35,6 +35,7 @@ const MarqueeView = (
   const isPlaying = useRef(autoPlay);
   const animatedValue = useRef(null);
   const reset = useRef(false);
+  const requestStart = useRef(false);
 
   useEffect(() => {
     offsetX.current.addListener(({ value }) => {
@@ -88,7 +89,10 @@ const MarqueeView = (
       PixelRatio.getPixelSizeForLayoutSize(-value + currentOffset) / speed;
     // Check speed with different value
     // const averageSpeed = (currentOffset - value) / durationByValue;
-
+    if(!containerWidth.current){
+      requestStart.current = true;
+      return;
+    }
     animatedValue.current = Animated.timing(offsetX.current, {
       toValue: value,
       duration: durationByValue,
@@ -96,9 +100,9 @@ const MarqueeView = (
       easing: Easing.linear,
       useNativeDriver: true,
     });
-
     isPlaying.current = true;
     reset.current = false;
+    requestStart.current = false
     animatedValue.current.start();
   };
   const childrenCloned = useMemo(
@@ -114,7 +118,7 @@ const MarqueeView = (
             return;
           }
           contentWidth.current = width;
-          if (autoPlay) {
+          if (autoPlay || requestStart.current) {
             start();
           }
         },
