@@ -89,7 +89,7 @@ const MarqueeView = (
       PixelRatio.getPixelSizeForLayoutSize(-value + currentOffset) / speed;
     // Check speed with different value
     // const averageSpeed = (currentOffset - value) / durationByValue;
-    if(!containerWidth.current){
+    if (!contentWidth.current) {
       requestStart.current = true;
       return;
     }
@@ -102,7 +102,7 @@ const MarqueeView = (
     });
     isPlaying.current = true;
     reset.current = false;
-    requestStart.current = false
+    requestStart.current = false;
     animatedValue.current.start();
   };
   const childrenCloned = useMemo(
