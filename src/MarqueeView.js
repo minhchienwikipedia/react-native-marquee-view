@@ -147,6 +147,7 @@ const MarqueeView = (
         horizontal={true}
         bounces={false}
         scrollEnabled={false}
+        contentContainerStyle={{ flex: 1 }}
         showsHorizontalScrollIndicator={false}
       >
         <Animated.View

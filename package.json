@@ -1,6 +1,6 @@
 {
   "name": "react-native-marquee-view",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React Native Draggable View",
   "main": "index.js",
   "scripts": {
