@@ -6,7 +6,6 @@ import React, {
   cloneElement,
   forwardRef,
   useCallback,
-  useState,
 } from "react";
 import {
   Animated,
@@ -37,7 +36,6 @@ const MarqueeView = (
   const animatedValue = useRef(null);
   const reset = useRef(false);
   const requestStart = useRef(false);
-  const [contentOutOfScreen, setContentOutOfScreen] = useState(true);
 
   useEffect(() => {
     offsetX.current.addListener(({ value }) => {
@@ -120,7 +118,6 @@ const MarqueeView = (
             return;
           }
           contentWidth.current = width;
-
           if (autoPlay || requestStart.current) {
             start();
           }
@@ -130,19 +127,19 @@ const MarqueeView = (
     [children]
   );
 
-  const measureContainerView = ({
-    nativeEvent: {
-      layout: { width },
+  const measureContainerView = useCallback(
+    ({
+      nativeEvent: {
+        layout: { width },
+      },
+    }) => {
+      if (containerWidth.current === width) {
+        return;
+      }
+      containerWidth.current = width;
     },
-  }) => {
-    if (containerWidth.current === width) {
-      return;
-    }
-    containerWidth.current = width;
-    if (contentWidth.current < containerWidth.current) {
-      setContentOutOfScreen(false);
-    }
-  };
+    []
+  );
 
   return (
     <View onLayout={measureContainerView} style={style}>
@@ -150,7 +147,7 @@ const MarqueeView = (
         horizontal={true}
         bounces={false}
         scrollEnabled={false}
-        contentContainerStyle={!contentOutOfScreen && { flex: 1 }}
+        // contentContainerStyle={{ flex: 1 }} | Fix issue android when content not out of screen
         showsHorizontalScrollIndicator={false}
       >
         <Animated.View
