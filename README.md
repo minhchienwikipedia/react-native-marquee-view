@@ -3,6 +3,8 @@
 [![npm version](https://badge.fury.io/js/react-native-marquee-view.svg)](https://badge.fury.io/js/react-native-marquee-view) ![](https://img.shields.io/github/issues/minhchienwikipedia/react-native-marquee-view.svg) ![](https://img.shields.io/github/forks/minhchienwikipedia/react-native-marquee-view.svg) ![](https://img.shields.io/github/stars/minhchienwikipedia/react-native-marquee-view.svg) ![](https://img.shields.io/github/license/minhchienwikipedia/react-native-marquee-view.svg)
 #### Help you auto scroll content
 
+<br><p><a href="https://www.buymeacoffee.com/minhchien"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="fateh999" /></a></p><br><br><br>
+
 ## Demo
 <img src="./demo.gif" data-canonical-src="./demo.gif" width="300" height="200" />
 
